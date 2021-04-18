@@ -960,3 +960,30 @@ Caused by: oracle.jdbc.OracleDatabaseException: ORA-02289: sequence does not exi
 2021-04-18 19:17:56.642  WARN 20512 --- [http-nio-8070-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
 2021-04-18 19:18:45.543  WARN 20512 --- [http-nio-8070-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
 2021-04-18 19:49:15.471  WARN 20512 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=27m24s262ms142µs700ns).
+2021-04-18 19:58:25.188  INFO 19552 --- [main] com.cg.surveyportal.ParticipantTests     : Starting ParticipantTests using Java 15.0.2 on Bhushan with PID 19552 (started by BHUSHAN in G:\Survey_Portal-master\com-cg-surveyportal)
+2021-04-18 19:58:25.194  INFO 19552 --- [main] com.cg.surveyportal.ParticipantTests     : No active profile set, falling back to default profiles: default
+2021-04-18 19:58:27.055  INFO 19552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-18 19:58:27.191  INFO 19552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 7 JPA repository interfaces.
+2021-04-18 19:58:28.883  INFO 19552 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-18 19:58:28.980  INFO 19552 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-18 19:58:29.075  INFO 19552 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-18 19:58:29.337  INFO 19552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-18 19:58:29.735  INFO 19552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-18 19:58:29.765  INFO 19552 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-18 19:58:31.037  INFO 19552 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-18 19:58:31.050  INFO 19552 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 19:58:32.369  WARN 19552 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-18 19:58:32.916  INFO 19552 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-18 19:58:33.410  INFO 19552 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-18 19:58:34.003  INFO 19552 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-18 19:58:34.035  INFO 19552 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-18 19:58:34.077  INFO 19552 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-18 19:58:34.497  INFO 19552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getfindByIdUsingGET_1
+2021-04-18 19:58:34.502  INFO 19552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: removeByIdUsingDELETE_1
+2021-04-18 19:58:34.554  INFO 19552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countRecordsUsingGET_1
+2021-04-18 19:58:34.609  INFO 19552 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: populateUsingGET_1
+2021-04-18 19:58:34.639  INFO 19552 --- [main] com.cg.surveyportal.ParticipantTests     : Started ParticipantTests in 10.07 seconds (JVM running for 12.692)
+2021-04-18 19:58:34.810  INFO 19552 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-18 19:58:34.822  INFO 19552 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-18 19:58:34.825  INFO 19552 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-18 19:58:34.839  INFO 19552 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

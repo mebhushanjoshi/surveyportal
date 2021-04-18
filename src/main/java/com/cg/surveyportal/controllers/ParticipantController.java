@@ -1,7 +1,5 @@
 package com.cg.surveyportal.controllers;
 
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
