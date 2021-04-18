@@ -15,55 +15,55 @@ public class ParticipantRepositoryImpl implements IParticipantRepository {
 
 	@Override
 	public List<Participant> findAll() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	@Override
 	public List<Participant> findAll(Sort sort) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	@Override
 	public List<Participant> findAllById(Iterable<Long> ids) {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 
 	@Override
 	public <S extends Participant> List<S> saveAll(Iterable<S> entities) {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 
 	@Override
 	public void flush() {
-		// TODO Auto-generated method stub
+	
 
 	}
 
 	@Override
 	public <S extends Participant> S saveAndFlush(S entity) {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 
 	@Override
 	public void deleteInBatch(Iterable<Participant> entities) {
-		// TODO Auto-generated method stub
+	
 
 	}
 
 	@Override
 	public void deleteAllInBatch() {
-		// TODO Auto-generated method stub
+	
 
 	}
 
 	@Override
 	public Participant getOne(Long id) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 

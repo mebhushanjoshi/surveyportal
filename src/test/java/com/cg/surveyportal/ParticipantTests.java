@@ -63,25 +63,24 @@ import com.cg.surveyportal.services.IParticipantService;
 			Mockito.when(participantRepository.findById(p.getId())).thenReturn(Optional.of(p));
 			Assertions.assertThrows(ParticipantNotFoundException.class, ()-> participantService.findParticipantById(21l));
 		}
-//		@Test
-//		@DisplayName ("Positive test case for updating Participant")
-//		public void testupdate() throws InvalidParticipantException, ParticipantNotFoundException
-//		{
-//			p.setFirstName("ram");
-//			String s = "Data Update Succesfully";
-//			Mockito.when(participantRepository.save(p)).thenReturn(p);
-//			assertThat(participantService.update(p)).isEqualTo(s);
-//		}
-//		
-//		@Test
-//		@DisplayName ("Negative test case for updating Participant")
-//		public void testupdateNegative() throws InvalidParticipantException, ParticipantNotFoundException
-//		{
-//			p.setFirstName("ram");
-//			String s = "Data not Updated Succesfully";
-//			Mockito.when(participantRepository.save(p)).thenReturn(p);
-//			assertThat(participantService.update(p)).isNotEqualTo(s);
-//		}
+
+		@Test
+		@DisplayName("Negative testcase for updating participant username")
+		public void UpdateUserNameNegative() throws ParticipantNotFoundException {
+			String newUsername = "sonu";
+			String oldUsername = p.getUsername();
+			p.setUsername(newUsername);
+			Mockito.when(participantRepository.save(p)).thenReturn(p);
+			assertNotEquals(p.getUsername(),oldUsername);
+		}
+		@Test
+		@DisplayName("Positive testcase for updating participant username")
+		public void testUpdateUserName() throws ParticipantNotFoundException {
+			String newUsername = "monu";
+			p.setUsername(newUsername);
+			Mockito.when(participantRepository.save(p)).thenReturn(p);
+			assertEquals(p.getUsername(),newUsername);
+		}
 //		
 //		@Test
 //		@DisplayName ("Positive test case for Adding Participant")
