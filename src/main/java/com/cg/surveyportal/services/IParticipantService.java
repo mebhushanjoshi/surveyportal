@@ -16,7 +16,8 @@ public interface IParticipantService {
     public String delete(Long participantId) throws InvalidParticipantException;
     public List<Participant> getAllParticipant();
     public void addFeedbackToParticipant(Long id, Feedback feedback) throws ParticipantNotFoundException;
-    public Long getRecordsCount(); 
+    public Long getRecordsCount();
+	void storeParticipant(); 
 }
 
 

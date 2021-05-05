@@ -16,4 +16,5 @@ public interface IFeedbackService {
 	public Feedback getById(long id) throws FeedbackNotFoundException;
 	public Feedback removeById(Long feedbackId);
 	public void addFeedback(long participantId, long surveyId, long questionId, String option) throws ParticipantNotFoundException, SurveyNotFoundException;
+	void populateFeedback() throws ParticipantNotFoundException, SurveyNotFoundException;
 }

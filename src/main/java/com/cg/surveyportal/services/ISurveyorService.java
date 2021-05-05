@@ -2,6 +2,7 @@ package com.cg.surveyportal.services;
 
 import java.util.List;
 
+import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Surveyor;
 import com.cg.surveyportal.exceptions.InvalidSurveyorException;
 import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
@@ -16,4 +17,6 @@ public interface ISurveyorService {
 	public String update(Surveyor surveyor)throws InvalidSurveyorException,SurveyorNotFoundException;
 	public Long getRecordsCount(); 
 	public String removeAllRecords();
+	public Surveyor getSurveyorDetails(int i);
+	public void addSurveysToSurveyor(Survey survey, int i);
 }

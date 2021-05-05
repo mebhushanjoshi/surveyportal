@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.entities.Surveyor;
 import com.cg.surveyportal.exceptions.InvalidSurveyorException;
 import com.cg.surveyportal.exceptions.SurveyorNotFoundException;
@@ -138,6 +139,20 @@ public class SurveyorServiceImpl implements ISurveyorService {
 		
 		surveyorRepository.deleteAll();
 		return "All Records Deleted ";
+	}
+
+
+	@Override
+	public Surveyor getSurveyorDetails(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void addSurveysToSurveyor(Survey survey, int i) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

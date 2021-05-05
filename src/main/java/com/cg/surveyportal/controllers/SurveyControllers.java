@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.exceptions.InvalidSurveyException;
 import com.cg.surveyportal.exceptions.SurveyNotFoundException;
+import com.cg.surveyportal.exceptions.TopicNotFoundException;
 import com.cg.surveyportal.services.ISurveyService;
 
 @RestController
@@ -33,6 +34,12 @@ public class SurveyControllers {
 	@GetMapping("/allsurveys")
 	private List<Survey> getAllSurveys() {
 		return surveyService.getAllSurveys();
+	}
+	
+	
+	@GetMapping("/populate")
+	private void populateSurvey() throws TopicNotFoundException {
+		surveyService.populateSurvey();
 	}
 	
 	//creating a get mapping that shows the Survey details by surveyId

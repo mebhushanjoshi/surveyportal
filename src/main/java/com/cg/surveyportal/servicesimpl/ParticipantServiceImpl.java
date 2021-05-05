@@ -31,6 +31,16 @@ public class ParticipantServiceImpl  implements IParticipantService
 	public Participant findParticipantById(Long participantId) throws ParticipantNotFoundException {
 		return iparticipantrepository.findById(participantId).orElseThrow(()-> new ParticipantNotFoundException("Invalid ParticipantId"));
 	}
+	
+	@Override
+	public String add(String firstName, String lastName, String userName)throws InvalidParticipantException, ParticipantNotFoundException {
+		Participant participant = new Participant();
+		participant.setFirstName(firstName);
+		participant.setLastName(lastName);
+		participant.setUsername(userName);
+		iparticipantrepository.save(participant);
+		return "Data added Succesfully";
+	}
 	@Override
 	public String update(Long id, String firstName, String lastName, String userName) throws InvalidParticipantException, ParticipantNotFoundException {
 		 Participant participant = iparticipantrepository.findById(id).get();
@@ -61,12 +71,35 @@ public class ParticipantServiceImpl  implements IParticipantService
 		return iparticipantrepository.count();
 	}
 	@Override
-	public String add(String firstName, String lastName, String userName)throws InvalidParticipantException, ParticipantNotFoundException {
-		Participant participant = new Participant();
-		participant.setFirstName(firstName);
-		participant.setLastName(lastName);
-		participant.setUsername(userName);
-		iparticipantrepository.save(participant);
-		return "Data added Succesfully";
+	public void storeParticipant()
+	{	
+		Participant sv = new Participant();
+		sv.setFirstName("Winston");
+		sv.setLastName("Taylor");
+		sv.setUsername("WinTaylor");
+		sv.setFeedback(null);
+		iparticipantrepository.save(sv);
+		//****************************************//
+		sv = new Participant();
+		sv.setFirstName("Jack");
+		sv.setLastName("Bull");
+		sv.setUsername("BullyJ");
+		sv.setFeedback(null);
+		iparticipantrepository.save(sv);
+		//****************************************//
+		sv = new Participant();
+		sv.setFirstName("Jennifer");
+		sv.setLastName("OConnell");
+		sv.setUsername("JenniferOC");
+		sv.setFeedback(null);
+		iparticipantrepository.save(sv);
+		//****************************************//
+		sv = new Participant();
+		sv.setFirstName("Patrick");
+		sv.setLastName("Sully");
+		sv.setUsername("PSully");
+		sv.setFeedback(null);
+		iparticipantrepository.save(sv);
+		//****************************************//
 	}
 }

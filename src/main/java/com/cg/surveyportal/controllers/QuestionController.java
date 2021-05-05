@@ -33,6 +33,11 @@ public class QuestionController {
 	private List<Question> getQuestionDetails(){
 		return questionService.getQuestionDetails();
 	}
+	@GetMapping("/populate")
+	private void populate() throws SurveyNotFoundException
+	{
+		questionService.populate();
+	}
 	
 	@GetMapping("/findById/{id}")
 	private Question getfindById(@PathVariable("id") long id) throws QuestionNotFoundException{

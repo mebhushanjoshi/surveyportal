@@ -117,7 +117,26 @@ import com.cg.surveyportal.services.IParticipantService;
 			Mockito.when(participantRepository.findAll()).thenReturn(Stream.of(p).collect(Collectors.toList()));
 			assertNotEquals(2, participantService.getAllParticipant().size());
 		}
+		@Test
+		@DisplayName("Positive Test Case for Getting Record Count")
+		 void testgetParticipantCount()
+		{
+			
+			Long a = 1l;
+			Mockito.when(participantRepository.count()).thenReturn(a);
+			assertThat(participantService.getRecordsCount()).isEqualTo(a);
+		}
 		
+		@Test
+		@DisplayName("Negative Test Case for Getting Record Count")
+		 void testgetParticipantCountNegative()
+		{
+			
+			Long a = 2l;
+			Long b = 3l;
+			Mockito.when(participantRepository.count()).thenReturn(a);
+			assertThat(participantService.getRecordsCount()).isNotEqualTo(b);
+		}
 		
 }
 

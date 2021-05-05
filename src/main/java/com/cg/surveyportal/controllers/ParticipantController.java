@@ -25,6 +25,12 @@ public class ParticipantController
 	@Autowired
 	ParticipantServiceImpl participantserviceimpl;
 	
+	@GetMapping("/store")
+	private void insert()
+	{
+		 participantserviceimpl.storeParticipant();
+	}
+	
 	@GetMapping("/count")
 	private ResponseEntity<Long> countRecords(){
 		return new ResponseEntity<>(participantserviceimpl.getRecordsCount(),HttpStatus.ACCEPTED);

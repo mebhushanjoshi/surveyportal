@@ -5,6 +5,7 @@ import java.util.List;
 import com.cg.surveyportal.entities.Survey;
 import com.cg.surveyportal.exceptions.InvalidSurveyException;
 import com.cg.surveyportal.exceptions.SurveyNotFoundException;
+import com.cg.surveyportal.exceptions.TopicNotFoundException;
 
 public interface ISurveyService {
 
@@ -16,4 +17,5 @@ public interface ISurveyService {
 	public void deleteAllsurveys();
 	void removeSurveyById(Long id) throws SurveyNotFoundException;
 	void closeSurvey(long id) throws SurveyNotFoundException;
+	public void populateSurvey() throws TopicNotFoundException;
 }

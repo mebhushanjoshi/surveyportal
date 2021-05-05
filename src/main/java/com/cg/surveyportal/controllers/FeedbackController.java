@@ -34,6 +34,11 @@ public class FeedbackController {
 	{
 		return feedbackService.getAll();
 	}
+	@GetMapping("/populate")
+	private void populate() throws ParticipantNotFoundException, SurveyNotFoundException
+	{
+		feedbackService.populateFeedback();
+	}
 	
 	@GetMapping("/findById/{id}")
 	private Feedback getfindById(@PathVariable("id") long id) throws FeedbackNotFoundException
